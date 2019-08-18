@@ -1,0 +1,154 @@
+﻿@model Automobile
+@{
+    ViewData["Title"] = "PostElan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form enctype="multipart/form-data" method="post">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Price"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="GraduationYear"></label>
+                        <input asp-for="GraduationYear" class="form-control" />
+                        <span asp-validation-for="GraduationYear"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EnginePower"></label>
+                        <input asp-for="EnginePower" class="form-control" />
+                        <span asp-validation-for="EnginePower"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EngineVolume"></label>
+                        <input asp-for="EngineVolume" class="form-control" />
+                        <span asp-validation-for="EngineVolume"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Mileage"></label>
+                        <input asp-for="Mileage" class="form-control" />
+                        <span asp-validation-for="Mileage"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Model.MarkId" >
+                            Marka
+                            <abbr></abbr>
+                        </label>
+                        <select id="Marks"  asp-items="@(new SelectList(ViewBag.Marks,"Id","Name"))">
+                            <option value="">Model Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ModelId">
+                            Model
+                            <abbr></abbr>
+                        </label>
+                        <select asp-for="@Model.ModelId">
+                            <option value="">Model Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.SpeedBoxId">
+                            Ötürücü Növü
+                            <abbr></abbr>
+                        </label>
+                        <select asp-for="@Model.SpeedBoxId" asp-items="@(new SelectList(ViewBag.SpeedBoxes,"Id","Name"))">
+                            <option value="">Ötürücü Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.FuelId">
+                            Yanacaq Növü
+                            <abbr></abbr>
+                        </label>
+                        <select asp-for="@Model.FuelId" asp-items="@(new SelectList(ViewBag.Fuels,"Id","Name"))">
+                            <option value="">Yanacaq Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.BanId">
+                            Ban Növü
+                            <abbr></abbr>
+                        </label>
+
+                        <select asp-for="@Model.BanId" asp-items="@(new SelectList(ViewBag.Bans,"Id","Name"))">
+                            <option value="">Ban Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ColorId">
+                            Rənglər
+                            <abbr></abbr>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <select asp-for="@Model.ColorId" asp-items="@(new SelectList(ViewBag.Colors,"Id","Name"))">
+                            <option value="">Rəng Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.CityId">
+                            Şəhərlər
+                            <abbr></abbr>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <select asp-for="@Model.CityId" asp-items="@(new SelectList(ViewBag.Cities,"Id","Name"))">
+                            <option value="">Şəhər Seç</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input asp-for="Photo" />
+                        <span asp-validation-for="Photo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AllCarImages"></label>
+                        <input asp-for="AllCarImages" />
+                        <span asp-validation-for="AllCarImages"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IsNew"></label>
+                        <input asp-for="IsNew" />
+                        <span asp-validation-for="IsNew"></span>
+                    </div>
+                    <input style="background:black;"  class="btn btn-success btn-block" type="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+          
+
+            $("#Marks").change(function () {
+                var MarkId = $(this).val();
+                console.log(MarkId);
+                $.ajax({
+
+                    url: "/Ajax/Index?id=" + MarkId,
+                    type: "get",
+                    success: function (res) {
+                        console.log(res);
+                        $("#ModelId").html(res);
+                    }
+                })
+            });
+        });
+    </script>
+}

@@ -1,0 +1,83 @@
+﻿@model  CarDetailsVM
+
+<form method="post" enctype="multipart/form-data">
+    <section>
+        <div class="container">
+            <div class="row" >
+                <div class="col-6">
+                    <img src="~/img/@Model.automobile.PhotoUrl" class=" img-fluid">
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        @foreach (var image in Model.carImages)
+                        {
+                            <div class="col-4 mt-3">
+                                <img src="~/img/@image.CarPhotoUrl" class=" img-fluid" style="width: 100%">
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+       
+            <div class="row">
+                <div class="col-6">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Model</td>
+                                <td>@Model.automobile.Model.Name</td>
+                            </tr>
+                            <tr>
+                                <td>Şəhər</td>
+                                <td>@Model.automobile.City.Name</td>
+                            </tr>
+
+                            <tr>
+                                <td>Marka</td>
+                                <td>@Model.automobile.Model.Mark.Name</td>
+                            </tr>
+                          
+                            <tr>
+                                <td>Ban növü</td>
+                                <td>@Model.automobile.Ban.Name</td>
+                            </tr>
+                            <tr>
+                                <td>Rəng</td>
+                                <td>@Model.automobile.Color.Name</td>
+                            </tr>
+                            <tr>
+                                <td>Mühərrikin həcmi</td>
+                                <td>@(Model.automobile.EngineVolume /1000) L</td>
+                            </tr>
+
+                            <tr>
+                                <td>Yanacaq növü</td>
+                                <td>@Model.automobile.Fuel.Name</td>
+                            </tr>
+                            <tr>
+                                <td>Yürüş</td>
+                                <td>@Model.automobile.Mileage km</td>
+                            </tr>
+                            <tr>
+                                <td>Sürətlər qutusu</td>
+                                <td>@Model.automobile.SpeedBox.Name</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Qiymət</td>
+                                <td>@Model.automobile.Price Azn</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <input class="btn btn-danger btn-block" type="submit" style="background:red" value="Delete"/>
+    </form>
+
+
+

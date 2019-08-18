@@ -1,0 +1,21 @@
+﻿@model  IEnumerable<News>
+@{
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section class="wrapper">
+    <div class="container">
+        <div class="row">
+            @foreach(var info in Model)
+            {
+                <div class="col-4">
+                    <h1>@info.Title</h1>
+                    <img class="img-fluid" src="~/img/@info.PhotoUrl" />
+                    <p>@info.Info</p>
+                </div>
+            }
+        </div>
+    </div>
+    </section>
+

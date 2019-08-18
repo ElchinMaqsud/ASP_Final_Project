@@ -1,0 +1,194 @@
+﻿@model IEnumerable<Automobile>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container" data-lotriver-wrapper="">
+    <form class="simple_form short-search" id="new_q" name="q_form" novalidate="novalidate" action="https://turbo.az/autos" accept-charset="UTF-8" method="get">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="input string optional q_price">
+            <label class="string optional control-label" for="q_price">Qiymət</label>
+            <select name="q[currency]" id="q_currency">
+                <option selected="selected" value="azn">AZN</option>
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+            </select><input class="string optional" placeholder="min." type="text" name="q[price_from]" id="q_price_from" /><input class="string optional" placeholder="maks." type="text" name="q[price_to]" id="q_price_to" />
+        </div><div class="auto_loan boolean optional q_loan"><input name="q[loan]" type="hidden" value="0" /><input class="boolean optional" type="checkbox" value="1" name="q[loan]" id="q_loan" /><label class="boolean optional control-label" for="q_loan">Kredit</label></div><div class="input select optional q_region">
+            <select class="select optional" name="q[region]" id="q_region">
+                <option value="">Bütün şəhərlər</option>
+                <option value="7">Ağcabədi</option>
+                <option value="4">Ağdam</option>
+                <option class="1" data-count="2" value="2364">ix55</option>
+            </select>
+        </div><div class="input string optional q_reg_year"><label class="string optional control-label" for="q_reg_year">Buraxılış ili</label><input class="string optional" placeholder="min." type="text" name="q[year_from]" id="q_year_from" /><input class="string optional" placeholder="maks." type="text" name="q[year_to]" id="q_year_to" /></div><div class="auto_barter boolean optional q_barter"><input name="q[barter]" type="hidden" value="0" /><input class="boolean optional" type="checkbox" value="1" name="q[barter]" id="q_barter" /><label class="boolean optional control-label" for="q_barter">Barter</label></div><input type="hidden" name="q[sort]" id="q_sort" /><div class="ad-count"><a class="all-ads-link" href="autos.html"></a><p class="ad-count--animation">24859 elan</p><p class="ad-count--animation">Bugün: 737 yeni</p></div><a id="q_expand" class="btn-full-search" href="autos/search.html">Ətraflı axtarış</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a style="margin-bottom:10px; margin-right:10px; margin-left:10px;" id="q_expand" class="btn btn-success" asp-controller="Account" asp-action="UserProfile"> Xoş Gəlmisiniz @User.Identity.Name</a>
+            <a style="margin-bottom:10px;" asp-controller="Account" asp-action="LogOut" class="btn btn-danger">Sign out</a>
+        }
+        else
+        {
+            <a style="margin-bottom:10px;  margin-left:10px;" asp-controller="Account" asp-action="Login" class="btn btn-primary">Sign in</a>
+            <a style="margin-bottom:10px;  margin-left:10px;" asp-controller="Account" asp-action="Register" class="btn btn-warning">Register</a>
+
+        }
+        <script>dynamicSelect('q_make', 'q_model');</script>
+    </form><div class="page-content">
+    <div class="products-container index-products-container">
+        <div class="section-title">
+            <p class="section-title_name">VIP elanlar</p><a class="section-title_more" target="_blank" href="autos/vip.html">Bütün VIP elanlar</a><div class="lotriver-text-banner" id="js-lotriver-text-banner">
+                <script type="text/javascript">
+                    var adriverExtentionLoad = function (a, b) {
+                        var mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                        if (a == '0') {
+                            var excludedSelectors = [
+                                'js-lotriver-text-banner',
+                                'js-lotriver-load-banner'
+                            ];
+
+                            if (excludedSelectors.indexOf("js-lotriver-text-banner") < 0) {
+                                document.getElementById("js-lotriver-text-banner").style.height = '0';
+                            }
+
+                            if ("js-lotriver-text-banner" === 'js-lotriver-top-banner' && mobileDevice) {
+                                var yandexScript = document.createElement('script');
+                                yandexScript.setAttribute('src', '../yastatic.net/pcode/adfox/loader.js');
+                                yandexScript.setAttribute('type', 'text/javascript');
+                                yandexScript.setAttribute('crossorigin', 'anonymous');
+                                document.head.appendChild(yandexScript);
+
+                                setTimeout(function () {
+                                    if (!(window.Ya && window.Ya.adfoxCode)) return;
+                                    window.Ya.adfoxCode.createAdaptive({
+                                        ownerId: 312649,
+                                        containerId: 'js-yandex-top-banner',
+                                        params: {
+                                            pp: 'g',
+                                            ps: 'djfl',
+                                            p2: 'gljg'
+                                        }
+                                    }, ['phone'], {
+                                            tabletWidth: 830,
+                                            phoneWidth: 480,
+                                            isAutoReloads: false
+                                        });
+                                }, 1000);
+                            }
+                        }
+                    };</script>
+
+                <script type="text/javascript">
+                    var normalizeTargetingParameter = function (str) {
+                        var mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                        if (mobileDevice) return;
+
+                        var letters = {
+                            'Ə': 'E',
+                            'Ü': 'U',
+                            'Ö': 'O',
+                            'Ğ': 'Gh',
+                            'Ş': 'Sh',
+                            'Ç': 'Ch',
+                            'İ': 'I',
+                            'ə': 'e',
+                            'ü': 'u',
+                            'ö': 'o',
+                            'ğ': 'gh',
+                            'ş': 'sh',
+                            'ç': 'ch',
+                            'ı': 'i'
+                        }
+
+                        var categoryNameArr = str.split('');
+                        var result = ad-count
+
+                        for (var i = 0; i < categoryNameArr.length; i += 1) {
+                            var letter = categoryNameArr[i];
+                            if (Object.keys(letters).indexOf(letter) !== -1) {
+                                result.push(letters[letter]);
+                            } else {
+                                result.push(letter);
+                            }
+                        }
+
+                        result = result.join('').split(' ').join('-');
+                        return result.indexOf('-/-') >= 0 ? result.split('-/-').join('-') : result;
+                    };
+
+                    (function (L) {
+                        var custom = [];
+                        /* custom params */
+                        /* end of custom params */
+                        custom.getStd = function () { for (var i = 0, j, s = []; i < this.length; i++) { if (this[i]) s.push((!j ? (j = 1, i + '=') : '') + escape(this[i])); else j = 0 } return s.length ? '&custom=' + s.join(';') : '' };
+                        if (typeof (ar_cn) == "undefined") ar_cn = 1;
+                        var S = 'setTimeout(function(e){if(!self.CgiHref){document.close();e=parent.document.getElementById("ar_container_"+ar_bnum);e.parentNode.removeChild(e);}},3000);',
+                            j = ' type="text/javascript"', t = 0, D = document, n = ar_cn; L = '' + ('https:' == document.location.protocol ? 'https:' : 'http:') + '' + L + escape(D.referrer || 'unknown') + '&rnd=' + Math.round(Math.random() * 999999999) + custom.getStd();
+                        function _() {
+                            if (t++ < 100) {
+                                var F = D.getElementById('ar_container_' + n);
+                                if (F) {
+                                    try {
+                                        var d = F.contentDocument || (window.ActiveXObject && window.frames['ar_container_' + n].document);
+                                        if (d) { d.write('<sc' + 'ript' + j + '>var ar_bnum=' + n + ';' + S + '<\/sc' + 'ript><sc' + 'ript' + j + ' src="' + L + '" onload="parent.adriverExtentionLoad(ar_adid,bid)"><\/sc' + 'ript>'); t = 0 }
+                                        else setTimeout(_, 100);
+                                    } catch (e) {
+                                        try {
+                                            F.src = "javascript:{document.write('<sc'+'ript" + j + ">var ar_bnum=" + n + "; document.domain=\""
+                                                + D.domain + "\";" + S + "<\/sc'+'ript>');document.write('<sc'+'ript" + j + " src=\"" + L + "\" onload=\"parent.adriverExtentionLoad(ar_adid,bid)\"><\/sc'+'ript>');}"; return
+                                        } catch (E) { }
+                                    }
+                                } else setTimeout(_, 100);
+                            }
+                        }
+                        D.querySelector('#js-lotriver-text-banner').innerHTML = ('<div style="visibility:hidden;height:0px;left:-1000px;position:absolute;"><iframe id="ar_container_' + ar_cn
+                            + '" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div><div id="ad_ph_' + ar_cn
+                            + '" style="display:none;"><\/div>'); _(); ar_cn++;
+                    })("http://ad.adriver.ru/cgi-bin/erle.cgi?sid=220552&amp;bn=8&amp;bt=43&amp;pz=0&amp;target=top&amp;tail256=");</script>
+            </div>
+        </div>
+        <div class="products">
+            @foreach (var car in Model)
+            {
+            <div class="products-i vipped">
+                <div class="products-img">
+                    <img src="~/img/@car.PhotoUrl" />
+                    <div class="products-info">
+                        <div class="products-price">
+                            <div class="product-price">@car.Price AZN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-description">
+                    <p class="products-name">@car.Name</p>
+                    <div class="products-attributes">
+                        <p class="products-attributes-i">@car.GraduationYear</p>
+                        <p class="products-attributes-i">@car.EngineVolume sm3</p>
+                        <p class="products-attributes-i">@car.Mileage</p>
+                    </div>
+                    <div class="products-bottom">@car.City</div>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-success" asp-controller="Home" asp-action="AdvertisementDetails" asp-route-id="@car.Id">Ətraflı</a>
+                </div>
+            </div>
+                
+               
+
+            }
+
+        </div>
+    <section data-section="recent" id="section-recent"></section>
+    </div>
+    <section data-section="shops" id="section-shops">
+        </section>
+    <section data-section="supplies_shops" id="section-supplies-shops"></section>
+    <div class="products-container index-products-container">
+    <section data-section="featured" id="section-featured"></section>
+    <section data-section="embed_tapaz" id="section-embed-tapaz"></section>
+    </div>
+</div><section data-section="makes" id="section-makes"></section>
+</div>
+
+

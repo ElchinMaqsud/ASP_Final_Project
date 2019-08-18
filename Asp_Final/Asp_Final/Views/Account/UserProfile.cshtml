@@ -1,0 +1,51 @@
+﻿    @model  IEnumerable<Automobile>
+@{
+    ViewData["Title"] = "UserProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @foreach (var car in Model)
+                {
+                    <div class="products-i vipped">
+                        <a class="products-i-link" target="_blank" href="autos/3378974-lada-vaz-niva.html"></a>
+                        <a class="js-bookmark-item-3378974" data-remote="true" rel="nofollow" data-method="post" href="autos/3378974-lada-vaz-niva/bookmarks.html">
+                            <div class="bookmarking"></div>
+                        </a>
+                        <a class="hide js-unbookmark-item-3378974" data-remote="true" rel="nofollow" data-method="delete" href="autos/3378974-lada-vaz-niva/bookmarks.html">
+                            <div class="bookmarking added"></div>
+                        </a>
+                        <div class="products-img">
+                            <img src="~/img/@car.PhotoUrl" />
+                            <div class="products-info">
+                                <div class="products-price">
+                                    <div class="product-price">@car.Price AZN</div>
+                                </div>
+                                <div class="products-barter">
+                                    <div class="products-tooltip">Barter mümkündür</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-description">
+                            <p class="products-name">@car.Name</p>
+                            <div class="products-attributes">
+                                <p class="products-attributes-i">@car.GraduationYear</p>
+                                <p class="products-attributes-i">@car.EngineVolume sm3</p>
+                                <p class="products-attributes-i">@car.Mileage</p>
+                            </div>
+                            <div class="products-bottom">@car.City</div>
+                            <div class="products-paid"><span class="featured-icon"></span><span class="vipped-icon"></span></div>
+                        </div>
+                    </div>
+                    
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="CarDetails" asp-route-id="@car.Id">Ətraflı</a>
+                    
+                    
+                }
+            </div>
+        </div>
+    </div>
+</section>

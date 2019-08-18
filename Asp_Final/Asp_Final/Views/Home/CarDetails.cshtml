@@ -1,0 +1,49 @@
+﻿@model CarDetailsVM
+
+    <div class="products-i vipped">
+        <a class="products-i-link" target="_blank" href="autos/3378974-lada-vaz-niva.html"></a>
+        <a class="js-bookmark-item-3378974" data-remote="true" rel="nofollow" data-method="post" href="autos/3378974-lada-vaz-niva/bookmarks.html">
+            <div class="bookmarking"></div>
+        </a>
+        <a class="hide js-unbookmark-item-3378974" data-remote="true" rel="nofollow" data-method="delete" href="autos/3378974-lada-vaz-niva/bookmarks.html">
+            <div class="bookmarking added"></div>
+        </a>
+        <div class="products-img">
+            <img src="~/img/@Model.automobile.PhotoUrl" />
+            <div class="products-info">
+                <div class="products-price">
+                    <div class="product-price">@Model.automobile.Price AZN</div>
+                </div>
+                <div class="products-barter">
+                    <div class="products-tooltip">Barter mümkündür</div>
+                </div>
+            </div>
+        </div>
+        <div class="products-description">
+            <p class="products-name">@Model.automobile.Name</p>
+            <div class="products-attributes">
+                <p class="products-attributes-i">@Model.automobile.GraduationYear</p>
+                <p class="products-attributes-i">@Model.automobile.EngineVolume sm3</p>
+                <p class="products-attributes-i">@Model.automobile.EnginePower At Gücü</p>
+                <p class="products-attributes-i">@Model.automobile.Mileage</p>
+            </div>
+            <div class="products-bottom">@Model.automobile.City</div>
+            <div class="products-paid"><span class="featured-icon"></span><span class="vipped-icon"></span></div>
+            <div>
+                <p style="font-weight:bold;">City:<span style="font-weight:100">@Model.automobile.City.Name</span></p>
+                <p style="font-weight:bold;">Model:<span style="font-weight:100">@Model.automobile.Model.Name</span></p>
+                <p style="font-weight:bold;">Ban:<span style="font-weight:100">@Model.automobile.Ban.Name</span></p> 
+                <p style="font-weight:bold;">Fuel:<span style="font-weight:100">@Model.automobile.Fuel.Name</span></p> 
+                <p style="font-weight:bold;">Color:<span style="font-weight:100">@Model.automobile.Color.Name</span></p> 
+                <p style="font-weight:bold;">Speedbox:<span style="font-weight:100">@Model.automobile.SpeedBox.Name</span></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="d-block">
+        <a class="btn btn-danger" asp-controller="Account" asp-action="DeleteAdvertisement" asp-route-Id="@Model.automobile.Id">Elanı Sil</a>
+        <a class="btn btn-warning" asp-controller="Account" asp-action="UpdateAdvertisement" asp-route-Id="@Model.automobile.Id">Elanı Yenilə</a>
+    </div>
+
+
+

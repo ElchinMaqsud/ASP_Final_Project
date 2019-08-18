@@ -1,0 +1,185 @@
+﻿@model CarDetailsVM
+
+<form enctype="multipart/form-data" method="post">
+    <section>
+        <div class="container">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="row" style="background:black ">
+                <div class="col-6">
+                    <img src="~/img/@Model.automobile.PhotoUrl" class="ElanImg img-fluid mt-3" style="width: 100%">
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        @foreach (var img in Model.carImages)
+                        {
+                            <div class="col-4 mt-3">
+                                <img src="~/img/@img.CarPhotoUrl" class="ElanImg img-fluid" style="width: 100%">
+                                <a class="btn btn-danger btn-block DeleteBTN" data-id="@img.Id">Delete</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="col-6 mb-3">
+                    <input class="single-photo" asp-for="@Model.automobile.Photo">
+                </div>
+                <div class="col-6  mb-3">
+                    <input class="photo " multiple asp-for="@Model.automobile.AllCarImages">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Marka</td>
+                                <td>
+                                    <select id="Marks" class="form-control" asp-items="@(new SelectList(ViewBag.Marks, "Id", "Name"))">
+                                        <option value=""> Marka secin</option>
+                                    </select>
+                                    <span asp-validation-for="@Model.automobile.Model.MarkId"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Model</td>
+                                <td>
+                                    <select class="form-control" id="ModelId" asp-for="@Model.automobile.ModelId"></select>
+                                    <span asp-validation-for="@Model.automobile.ModelId"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Şəhər</td>
+                                <td>
+                                    <select asp-for="@Model.automobile.CityId" value="@Model.automobile.City.Name" class="form-control" asp-items="@(new SelectList(ViewBag.Cities,"Id","Name"))"></select>
+                                    <span asp-validation-for="@Model.automobile.CityId"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Buraxılış ili</td>
+                                <td>
+                                    <input value="@Model.automobile.GraduationYear" class="form-control" asp-for="@Model.automobile.GraduationYear" />
+                                    <span asp-validation-for="@Model.automobile.GraduationYear"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Elanin adi</td>
+                                <td>
+                                    <input value="@Model.automobile.Name" class="form-control" asp-for="@Model.automobile.Name" />
+                                    <span asp-validation-for="@Model.automobile.Name"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ban növü</td>
+                                <td>
+                                    <select class="form-control" value="@Model.automobile.BanId" asp-for="@Model.automobile.BanId" asp-items="@(new SelectList(ViewBag.Bans,"Id","Name"))">
+                                        <option value=""> Ban novu secin</option>
+                                    </select>
+                                    <span asp-validation-for="@Model.automobile.BanId"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rəng</td>
+                                <td>
+                                    <select asp-for="@Model.automobile.ColorId" value="@Model.automobile.Color.Name" class="form-control" asp-items="@(new SelectList(ViewBag.Colors,"Id","Name"))"></select>
+                                    <span asp-validation-for="@Model.automobile.ColorId"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mühərrikin həcmi</td>
+                                <td>
+                                    <input class="form-control" value="@Model.automobile.EngineVolume" asp-for="@Model.automobile.EngineVolume" />
+                                    <span asp-validation-for="@Model.automobile.EngineVolume"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mühərrikin Gücü</td>
+                                <td>
+                                    <input class="form-control" value="@Model.automobile.EnginePower" asp-for="@Model.automobile.EnginePower" />
+                                    <span asp-validation-for="@Model.automobile.EnginePower"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Yanacaq növü</td>
+                                <td>
+                                    <select class="form-control" value="@Model.automobile.Fuel.Name" asp-for="@Model.automobile.FuelId" asp-items="@(new SelectList(ViewBag.Fuels,"Id","Name"))"></select>
+                                    <span asp-validation-for="@Model.automobile.FuelId"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Yürüş</td>
+                                <td>
+                                    <input asp-for="@Model.automobile.Mileage" value="@Model.automobile.Mileage" class="form-control" placeholder="Yol mesafesi">
+                                    <span asp-validation-for="@Model.automobile.Mileage"></span>
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Sürətlər qutusu</td>
+                                <td>
+                                    <select class="form-control" value="@Model.automobile.SpeedBox.Name" asp-for="@Model.automobile.SpeedBoxId" asp-items="@(new SelectList(ViewBag.SpeedBoxes,"Id","Name"))"></select>
+                                    <span asp-validation-for="@Model.automobile.SpeedBoxId"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Qiymət</td>
+                                <td>
+                                    <input asp-for="@Model.automobile.Price" value="@Model.automobile.Price" class="form-control" placeholder="Qiymet">
+                                    <span asp-validation-for="@Model.automobile.Price"></span>
+                                    $
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <div style="visibility:hidden"></div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-success btn-block" value="Update" />
+        </div>
+    </section>
+</form>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            $("#Marks").change(function () {
+                var MarkId = $(this).val();
+                console.log(MarkId);
+                $.ajax({
+
+                    url: "/Ajax/Index?id=" + MarkId,
+                    type: "get",
+                    success: function (res) {
+                        console.log(res);
+                        $("#ModelId").html(res);
+                    }
+                })
+            });
+
+            $(".DeleteBTN").click(function () {
+                $(this).parent().remove();
+                var ImageId = $(this).attr("data-id");
+
+                if (ImageId) {
+                    $.ajax({
+                        url: "/Ajax/DeleteSingleImage?ImageId=" + ImageId,
+                        type: "GET",
+                    });
+                }
+
+            })
+
+
+        });
+
+
+    </script>
+}
