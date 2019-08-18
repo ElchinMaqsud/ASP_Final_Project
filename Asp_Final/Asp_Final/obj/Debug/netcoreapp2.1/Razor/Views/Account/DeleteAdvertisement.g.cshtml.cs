@@ -64,12 +64,12 @@ using Asp_Final.ViewModels;
             WriteLiteral("\n");
             EndContext();
             BeginContext(23, 3092, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "beea8f980e0041d88fc3bbbfdcd89b66", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "98ad26517e0a450ea8fbc64d4fedf1fa", async() => {
                 BeginContext(73, 134, true);
                 WriteLiteral("\n    <section>\n        <div class=\"container\">\n            <div class=\"row\" >\n                <div class=\"col-6\">\n                    ");
                 EndContext();
                 BeginContext(207, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0ff7dab4abbe4a4fa110263551637622", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4adfd536528e4f46a5b9834dbf317d51", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,7 +104,7 @@ AddHtmlAttributeValue("", 223, Model.automobile.PhotoUrl, 223, 26, false);
                 WriteLiteral("                            <div class=\"col-4 mt-3\">\n                                ");
                 EndContext();
                 BeginContext(543, 75, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "64ca4147354540cf8c34872291325245", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "07ab5942bbd847afae3fbb27e1cc9954", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

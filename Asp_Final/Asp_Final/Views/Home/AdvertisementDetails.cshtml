@@ -26,12 +26,12 @@
     <div class="products-description">
         <p class="products-name">@Model.automobile.Name</p>
         <div class="products-attributes">
-            <p class="products-attributes-i">@Model.automobile.GraduationYear</p>
-            <p class="products-attributes-i">@Model.automobile.EngineVolume sm3</p>
+            <p class="products-attributes-i">@Model.automobile.GraduationYear.Year</p>
+            <p class="products-attributes-i">@Model.automobile.EngineVolume sm3</p>.
             <p class="products-attributes-i">@Model.automobile.EnginePower At Gücü</p>
-            <p class="products-attributes-i">@Model.automobile.Mileage</p>
+            <p class="products-attributes-i">@Model.automobile.Mileage km</p>
         </div>
-        <div class="products-bottom">@Model.automobile.City</div>
+        <div class="products-bottom">@Model.automobile.City Şəhəri</div>
         <div class="products-paid"><span class="featured-icon"></span><span class="vipped-icon"></span></div>
         <div>
             <p style="font-weight:bold;">City:<span style="font-weight:100">@Model.automobile.City.Name</span></p>

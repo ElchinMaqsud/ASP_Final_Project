@@ -163,11 +163,11 @@
                 <div class="products-description">
                     <p class="products-name">@car.Name</p>
                     <div class="products-attributes">
-                        <p class="products-attributes-i">@car.GraduationYear</p>
+                        <p class="products-attributes-i">@car.GraduationYear.Year</p>
                         <p class="products-attributes-i">@car.EngineVolume sm3</p>
-                        <p class="products-attributes-i">@car.Mileage</p>
+                        <p class="products-attributes-i">@car.Mileage km</p>
                     </div>
-                    <div class="products-bottom">@car.City</div>
+                    <div class="products-bottom">@car.City Şəhəri</div>
                 </div>
                 <div class="col-1">
                     <a class="btn btn-success" asp-controller="Home" asp-action="AdvertisementDetails" asp-route-id="@car.Id">Ətraflı</a>

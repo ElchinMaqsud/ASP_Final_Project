@@ -82,12 +82,12 @@ using Asp_Final.ViewModels;
             WriteLiteral("    <html lang=\"en\">\r\n\r\n    ");
             EndContext();
             BeginContext(156, 1106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a273fd4229154f3d84812fb2e61ca3dc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4466d8fc887a429eb723a97b856b2232", async() => {
                 BeginContext(162, 44, true);
                 WriteLiteral("\r\n        <meta charset=\"utf-8\" />\r\n        ");
                 EndContext();
                 BeginContext(206, 84, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "919d0509f20249c08d17959ab66a1bbf", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6547627f5804403fa17c06becaae3b19", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -107,7 +107,7 @@ using Asp_Final.ViewModels;
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(300, 72, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4f733d4368864be780ae901eebd2fe84", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8deb9b2948754bffa13433e9fbdf01d6", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -137,7 +137,7 @@ using Asp_Final.ViewModels;
         ");
                 EndContext();
                 BeginContext(1018, 82, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "60fe7aaf69c845a4bfdb573d0e7da5c6", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "07c8044e57ee4145bfa84b2861537425", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -156,7 +156,7 @@ using Asp_Final.ViewModels;
                 WriteLiteral("\r\n        <!-- CSS Just for demo purpose, don\'t include it in your project -->\r\n        ");
                 EndContext();
                 BeginContext(1188, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "298cafeccca347e4aa938888526928fb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e9e22dc7a3e84d85b314d16055e11ea5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -190,7 +190,7 @@ using Asp_Final.ViewModels;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1268, 4264, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c323d0acad8147ffaf67bc309682a971", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0275db410fb405dbf5253249efadbf0", async() => {
                 BeginContext(1283, 3772, true);
                 WriteLiteral(@"
         <div class=""wrapper "">
@@ -284,7 +284,7 @@ using Asp_Final.ViewModels;
                 WriteLiteral("</h1>\r\n                            ");
                 EndContext();
                 BeginContext(5102, 53, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "39dde2116d5a41608f06c7ae8f4d4cf0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "88464e8ee76841a4a7b6f7b266af626d", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -320,7 +320,7 @@ AddHtmlAttributeValue("", 5136, Model.PhotoUrl, 5136, 15, false);
                 WriteLiteral("</p>\r\n                        </div>\r\n                        <div class=\"col-2\">\r\n                            ");
                 EndContext();
                 BeginContext(5310, 89, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46074ade79a94160b31cae863e12a22e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b02d8dd62d754617b636854fe404f762", async() => {
                     BeginContext(5382, 13, true);
                     WriteLiteral("Back to Index");
                     EndContext();

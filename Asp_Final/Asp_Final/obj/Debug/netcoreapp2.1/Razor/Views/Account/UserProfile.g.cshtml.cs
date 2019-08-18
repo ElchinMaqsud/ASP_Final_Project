@@ -90,7 +90,7 @@ using Asp_Final.ViewModels;
                             ");
             EndContext();
             BeginContext(1071, 33, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "192f2a06d642466e831cae93d1323308", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "269d266bed1d42309f157373111d1627", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -186,7 +186,7 @@ AddHtmlAttributeValue("", 1087, car.PhotoUrl, 1087, 13, false);
             WriteLiteral("                        ");
             EndContext();
             BeginContext(2414, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6197c2bccd414e05aa9d451877a4c707", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec7dfa1722f94675937103bae67a330a", async() => {
                 BeginContext(2510, 7, true);
                 WriteLiteral("Ətraflı");
                 EndContext();

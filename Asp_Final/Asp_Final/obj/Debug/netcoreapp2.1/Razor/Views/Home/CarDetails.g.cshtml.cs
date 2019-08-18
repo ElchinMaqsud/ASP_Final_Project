@@ -74,7 +74,7 @@ using Asp_Final.ViewModels;
             ");
             EndContext();
             BeginContext(636, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "212060c1ae2b46aeb46c9e5ab3dd18de", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fcc6c5076fd44fa28029e7b1faca15eb", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -237,7 +237,7 @@ AddHtmlAttributeValue("", 652, Model.automobile.PhotoUrl, 652, 26, false);
             WriteLiteral("</span></p>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"d-block\">\r\n        ");
             EndContext();
             BeginContext(2605, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "006d7745541c4e048adb5571280e57ca", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c76a9de6499449ab93cd8cc82cf8098", async() => {
                 BeginContext(2725, 9, true);
                 WriteLiteral("Elanı Sil");
                 EndContext();
@@ -275,7 +275,7 @@ AddHtmlAttributeValue("", 652, Model.automobile.PhotoUrl, 652, 26, false);
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(2748, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c771e537a104a09a26cc186f582b289", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01db2c8b40604c419fd454a7a5ed9f57", async() => {
                 BeginContext(2869, 12, true);
                 WriteLiteral("Elanı Yenilə");
                 EndContext();
